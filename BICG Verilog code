@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05.05.2020 14:03:57
-// Design Name: 
-// Module Name: matrix3
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module matrix3(Aout,Atout,y1,y2,clk,x1,x2);
@@ -34,8 +15,8 @@ module matrix3(Aout,Atout,y1,y2,clk,x1,x2);
    begin
         if((y1<100))
         begin
-        x1=x1+Aout*y1;
-        x2=x2+Atout*y2;  
+        x1=Aout*y1;
+        x2=Atout*y2;  
         end
         else
         begin
@@ -52,25 +33,7 @@ test bench code is also as follow
 
 
 timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05.05.2020 14:08:33
-// Design Name: 
-// Module Name: matrix3_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
 
 
 module matrix3_tb( );
